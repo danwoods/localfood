@@ -1,0 +1,19 @@
+[
+  { "title": "Bakery", "id": "bakery" },
+  { "title": "Barbeque", "id": "barbeque" },
+  { "title": "Breakfast", "id": "breakfast" },
+  { "title": "Chinese", "id": "chinese" },
+  { "title": "Coffee", "id": "coffee" },
+  { "title": "Ethiopian", "id": "ethiopian" },
+  { "title": "French", "id": "french" },
+  { "title": "Hamburgers", "id": "hamburgers" },
+  { "title": "Italian", "id": "italian" },
+  { "title": "Japanese", "id": "japanese" },
+  { "title": "Mexican", "id": "mexican" },
+  { "title": "Sandwiches", "id": "sandwiches" },
+  { "title": "Seafood", "id": "seafood" },
+  { "title": "Southern", "id": "southern" },
+  { "title": "Spanish", "id": "spanish" },
+  { "title": "Wings", "id": "wings" },
+  { "title": "Diner", "id": "diner" }
+]

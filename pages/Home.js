@@ -1,0 +1,141 @@
+import Button from '@material-ui/core/Button'
+import Checkbox from '@material-ui/core/Checkbox'
+import Dialog from '@material-ui/core/Dialog'
+import DialogActions from '@material-ui/core/DialogActions'
+import DialogContent from '@material-ui/core/DialogContent'
+import DialogTitle from '@material-ui/core/DialogTitle'
+import FormControlLabel from '@material-ui/core/FormControlLabel'
+import FormGroup from '@material-ui/core/FormGroup'
+import List from '@material-ui/core/List'
+import ListItem from '@material-ui/core/ListItem'
+import TextField from '@material-ui/core/TextField'
+import Typography from '@material-ui/core/Typography'
+import { Create } from '../components/Create.js'
+import { RestaurantListItem } from '../components/RestaurantListItem.js'
+import { makeStyles } from '@material-ui/core/styles'
+import { useState } from 'react'
+import usePlacesAutocomplete, {
+  getGeocode,
+  getLatLng
+} from 'use-places-autocomplete'
+import Autocomplete from '@material-ui/lab/Autocomplete'
+import restaurants from '../restaurants.json'
+
+const useStyles = makeStyles({
+  root: {
+    width: '100%',
+    maxWidth: 960,
+    margin: '64px auto'
+  },
+  header: {
+    textAlign: 'center'
+  },
+  pickupOrDelievery: {
+    display: 'flex',
+    justifyContent: 'space-around',
+    margin: 'auto',
+    width: '60%'
+  }
+})
+
+function App() {
+  const classes = useStyles()
+
+  const [isCreateDialogOpen, setCreateDialogOpen] = useState(false)
+  const {
+    ready,
+    value: addressValue,
+    suggestions: { status, data },
+    setValue: setAddressValue,
+    clearSuggestions: clearAddressSuggestions
+  } = usePlacesAutocomplete({
+    requestOptions: {
+      /* Define search scope here */
+    },
+    debounce: 300
+  })
+
+  console.log({ ready })
+
+  return (
+    <div className={classes.root}>
+      <header className={classes.header}>
+        <Typography variant="h1" component="h2" gutterBottom>
+          {'LocalFood.page'}
+        </Typography>
+      </header>
+      <section className={classes.search} style={{ marginBottom: 32 }}>
+        <Autocomplete
+          popupIcon={null}
+          id="combo-box-demo"
+          options={data}
+          getOptionLabel={(option) => option.description}
+          fullWidth={true}
+          onInputChange={(e, val) => setAddressValue(val)}
+          renderInput={(params) => (
+            <TextField
+              {...params}
+              label="Delivery Address"
+              variant="outlined"
+            />
+          )}
+        />
+      </section>
+      <section className={classes.search}>
+        <TextField
+          id="filled-basic"
+          label="Search"
+          variant="filled"
+          fullWidth={true}
+        />
+      </section>
+      <section>
+        <FormGroup
+          aria-label="pickup or delivery"
+          row
+          className={classes.pickupOrDelievery}
+        >
+          <FormControlLabel
+            value={'DELIVERY'}
+            control={<Checkbox color="primary" />}
+            label={'Delivery'}
+            labelPlacement={'end'}
+          />
+          <FormControlLabel
+            value={'PICKUP'}
+            control={<Checkbox color="primary" />}
+            label="Pickup"
+            labelPlacement="end"
+          />
+        </FormGroup>
+      </section>
+      <section>
+        <List className={classes.list}>
+          {restaurants.map((r) => (
+            <ListItem>
+              <RestaurantListItem {...r} />
+            </ListItem>
+          ))}
+        </List>
+      </section>
+      <Button onClick={() => setCreateDialogOpen(true)}>
+        {'Add Restaurant'}
+      </Button>
+      <Dialog
+        onClose={() => setCreateDialogOpen(false)}
+        aria-labelledby="simple-dialog-title"
+        open={isCreateDialogOpen}
+      >
+        <DialogTitle id="simple-dialog-title">{'Add Restaurant'}</DialogTitle>
+        <DialogContent>
+          <Create />
+        </DialogContent>
+        <DialogActions>
+          <Button>{'Submit'}</Button>
+        </DialogActions>
+      </Dialog>
+    </div>
+  )
+}
+
+export default App

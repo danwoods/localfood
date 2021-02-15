@@ -1,0 +1,44 @@
+[
+  {
+    "id": "mizumi",
+    "name": "Mizumi Ramen and Saki",
+    "cuisine": "Ramen",
+    "logoUrl": "http://mizuumiramen.com/img/logo.png",
+    "phone": "303-353-8158",
+    "websiteUrl": "http://mizuumiramen.com/",
+    "menuUrl": "https://www.24onlinetogo.com/ordering/restaurant/menu?restaurant_uid=bfbea315-811e-46e4-bcf6-537749d471f5",
+    "orderUrl": "https://www.24onlinetogo.com/ordering/restaurant/menu?restaurant_uid=bfbea315-811e-46e4-bcf6-537749d471f5",
+    "offersDelivery": false
+  },
+  {
+    "id": "hops-and-pie",
+    "name": "Hops and Pie",
+    "cuisine": "Pizza",
+    "logoUrl": "https://www.hopsandpie.com/wp-content/uploads/2014/03/logo-hp-2x.png",
+    "phone": "303-477-7000",
+    "websiteUrl": "https://www.hopsandpie.com/",
+    "menuUrl": "https://slicelife.com/restaurants/co/denver/80212/hops-pie/menu",
+    "orderUrl": "https://slicelife.com/restaurants/co/denver/80212/hops-pie/menu"
+  },
+  {
+    "id": "cholon",
+    "name": "Cholon",
+    "cuisine": "Chinese-fusion",
+    "logoUrl": "https://www.cholon.com/downtown/wp-content/themes/cholon/images/cholon-logo.png",
+    "phone": "615-358-5095",
+    "websiteUrl": "google.com",
+    "menuUrl": "google.com",
+    "orderUrl": "google.com"
+  },
+  {
+    "id": "hits-the-spot",
+    "name": "Hits the Spot Diner",
+    "cuisine": "Diner",
+    "logoUrl": "https://s3-media0.fl.yelpcdn.com/bphoto/JlVuUcJq3nQOoeDoyYpxYQ/o.jpg",
+    "phone": "303-284-6278",
+    "websiteUrl": "https://hitsthespotdiner.com",
+    "menuUrl": "https://www.yelp.com/menu/hits-the-spot-diner-lakewood-2",
+    "orderUrl": null,
+    "offersDelivery": false
+  }
+]
