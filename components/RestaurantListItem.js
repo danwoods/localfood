@@ -1,8 +1,9 @@
 import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
 import CardMedia from '@material-ui/core/CardMedia'
-import { makeStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
+import { Fragment } from 'react'
+import { makeStyles } from '@material-ui/core/styles'
 
 const useListItemCardStyles = makeStyles((theme) => ({
   root: {
@@ -71,14 +72,22 @@ export const RestaurantListItem = ({
           <a href={`tel:${phone}`} className={classes.link}>
             {phone}
           </a>
-          |
-          <a href={menuUrl} className={classes.link}>
-            {'Menu'}
-          </a>
-          |
-          <a href={orderUrl} className={classes.link}>
-            {'Order Now'}
-          </a>
+          {menuUrl ? (
+            <Fragment>
+              {'|'}
+              <a href={menuUrl} className={classes.link}>
+                {'Menu'}
+              </a>
+            </Fragment>
+          ) : null}
+          {orderUrl ? (
+            <Fragment>
+              {'|'}
+              <a href={orderUrl} className={classes.link}>
+                {'Order Now'}
+              </a>
+            </Fragment>
+          ) : null}
         </div>
       </div>
     </Card>
