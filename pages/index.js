@@ -8,6 +8,7 @@ export default function Home() {
       <Head>
         <title>{'Local Food Directory'}</title>
         <link rel="icon" href="/favicon.ico" />
+	  <script key={'analytics'} data-host="https://microanalytics.io" data-dnt="false" src="https://microanalytics.io/js/script.js" id="ZwSg9rf6GA" async defer></script>
       </Head>
 
       <main className={styles.main}>
