@@ -61,9 +61,10 @@ function App() {
     <div className={classes.root}>
       <header className={classes.header}>
         <Typography variant="h1" component="h2" gutterBottom>
-          {'LocalFood.page'}
+          {'YOUR Local Food Directory'}
         </Typography>
       </header>
+      {/*
       <section className={classes.search} style={{ marginBottom: 32 }}>
         <Autocomplete
           popupIcon={null}
@@ -109,6 +110,7 @@ function App() {
           />
         </FormGroup>
       </section>
+			*/}
       <section>
         <List className={classes.list}>
           {restaurants.map((r) => (
@@ -118,9 +120,11 @@ function App() {
           ))}
         </List>
       </section>
+      {/*
       <Button onClick={() => setCreateDialogOpen(true)}>
         {'Add Restaurant'}
       </Button>
+			*/}
       <Dialog
         onClose={() => setCreateDialogOpen(false)}
         aria-labelledby="simple-dialog-title"
