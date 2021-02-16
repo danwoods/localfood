@@ -40,5 +40,16 @@
     "menuUrl": "https://www.yelp.com/menu/hits-the-spot-diner-lakewood-2",
     "orderUrl": null,
     "offersDelivery": false
+  },
+  {
+    "id": "el-consome-de-morelos",
+    "name": "El Consome De Morelos",
+    "cuisine": "Mexican",
+    "logoUrl": "https://s3-media0.fl.yelpcdn.com/bphoto/nBzxb6ZRusE-Y4MDE9_Jww/l.jpg",
+    "phone": "(720) 361-8263",
+    "websiteUrl": "https://www.yelp.com/biz/el-consome-de-morelos-denver-4",
+    "menuUrl": null,
+    "orderUrl": null,
+    "offersDelivery": false
   }
 ]
