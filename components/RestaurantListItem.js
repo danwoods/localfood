@@ -55,7 +55,7 @@ export const RestaurantListItem = ({
       itemType={'https://schema.org/Restaurant'}
     >
       <CardMedia
-        itemProp={'logo'}
+        itemProp={'image'}
         className={classes.cover}
         image={logoUrl}
         title={`${name} logo`}
@@ -83,7 +83,7 @@ export const RestaurantListItem = ({
               <a
                 href={`tel:${phone}`}
                 className={classes.link}
-                itemProp="telephone"
+                itemProp={'telephone'}
               >
                 {phone}
               </a>
