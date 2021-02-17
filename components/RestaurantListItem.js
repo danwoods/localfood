@@ -49,62 +49,64 @@ export const RestaurantListItem = ({
   const classes = useListItemCardStyles()
 
   return (
-    <article itemscope itemtype={'https://schema.org/Restaurant'}>
-      <Card className={classes.root}>
-        <CardMedia
-          itemprop={'logo'}
-          className={classes.cover}
-          image={logoUrl}
-          title={`${name} logo`}
-        />
-        <div className={classes.details}>
-          <CardContent className={classes.content}>
-            <Typography component="h5" variant="h5" itemprop="name">
-              {name}
-            </Typography>
-            <Typography
-              variant="subtitle1"
-              color="textSecondary"
-              itemprop="servesCuisine"
-            >
-              {`${cuisine}`}
-            </Typography>
-          </CardContent>
-          <div className={classes.controls}>
-            <a href={websiteUrl} className={classes.link} itemprop="url">
-              {'Website'}
-            </a>
-            {phone ? (
-              <Fragment>
-                {'|'}
-                <a
-                  href={`tel:${phone}`}
-                  className={classes.link}
-                  itemprop="telephone"
-                >
-                  {phone}
-                </a>
-              </Fragment>
-            ) : null}
-            {menuUrl ? (
-              <Fragment>
-                {'|'}
-                <a href={menuUrl} className={classes.link}>
-                  {'Menu'}
-                </a>
-              </Fragment>
-            ) : null}
-            {orderUrl ? (
-              <Fragment>
-                {'|'}
-                <a href={orderUrl} className={classes.link}>
-                  {'Order Now'}
-                </a>
-              </Fragment>
-            ) : null}
-          </div>
+    <Card
+      className={classes.root}
+      itemScope
+      itemType={'https://schema.org/Restaurant'}
+    >
+      <CardMedia
+        itemProp={'logo'}
+        className={classes.cover}
+        image={logoUrl}
+        title={`${name} logo`}
+      />
+      <div className={classes.details}>
+        <CardContent className={classes.content}>
+          <Typography component="h5" variant="h5" itemProp="name">
+            {name}
+          </Typography>
+          <Typography
+            variant="subtitle1"
+            color="textSecondary"
+            itemProp="servesCuisine"
+          >
+            {`${cuisine}`}
+          </Typography>
+        </CardContent>
+        <div className={classes.controls}>
+          <a href={websiteUrl} className={classes.link} itemProp="url">
+            {'Website'}
+          </a>
+          {phone ? (
+            <Fragment>
+              {'|'}
+              <a
+                href={`tel:${phone}`}
+                className={classes.link}
+                itemProp="telephone"
+              >
+                {phone}
+              </a>
+            </Fragment>
+          ) : null}
+          {menuUrl ? (
+            <Fragment>
+              {'|'}
+              <a href={menuUrl} className={classes.link}>
+                {'Menu'}
+              </a>
+            </Fragment>
+          ) : null}
+          {orderUrl ? (
+            <Fragment>
+              {'|'}
+              <a href={orderUrl} className={classes.link}>
+                {'Order Now'}
+              </a>
+            </Fragment>
+          ) : null}
         </div>
-      </Card>
-    </article>
+      </div>
+    </Card>
   )
 }
