@@ -1,14 +1,32 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
 import Home2 from './Home.js'
+import styles from '../styles/Home.module.css'
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
         <title>{'Local Food Directory'}</title>
-        <link rel="icon" href="/favicon.ico" />
-	  <script key={'analytics'} data-host="https://microanalytics.io" data-dnt="false" src="https://microanalytics.io/js/script.js" id="ZwSg9rf6GA" async defer></script>
+        <link rel="icon" href="/favicon.svg" />
+        <meta
+          name={'description'}
+          content={
+            'Local delivery. Zero fees. Powered by community. (Denver Only)'
+          }
+        />
+        <meta
+          name={'keywords'}
+          content={'Delivery, Local, Food, Dinner, Dining, Denver'}
+        />
+        <script
+          key={'analytics'}
+          data-host="https://microanalytics.io"
+          data-dnt="false"
+          src="https://microanalytics.io/js/script.js"
+          id="ZwSg9rf6GA"
+          async
+          defer
+        ></script>
       </Head>
 
       <main className={styles.main}>
