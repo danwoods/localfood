@@ -19,8 +19,9 @@ const useListItemCardStyles = makeStyles((theme) => ({
   },
   cover: {
     backgroundSize: 'contain',
-    margin: '8px 0',
-    width: 151
+    margin: '8px 0 8px 8px',
+    width: theme.spacing(19),
+    height: theme.spacing(14)
   },
   controls: {
     display: 'flex',
@@ -49,29 +50,43 @@ export const RestaurantListItem = ({
   const classes = useListItemCardStyles()
 
   return (
-    <Card className={classes.root}>
+    <Card
+      classes={{ root: classes.root }}
+      itemScope
+      itemType={'https://schema.org/Restaurant'}
+    >
       <CardMedia
+        itemProp={'image'}
         className={classes.cover}
         image={logoUrl}
+        component={'img'}
         title={`${name} logo`}
       />
       <div className={classes.details}>
         <CardContent className={classes.content}>
-          <Typography component="h5" variant="h5">
+          <Typography component="h5" variant="h5" itemProp="name">
             {name}
           </Typography>
-          <Typography variant="subtitle1" color="textSecondary">
+          <Typography
+            variant="subtitle1"
+            color="textSecondary"
+            itemProp="servesCuisine"
+          >
             {`${cuisine}`}
           </Typography>
         </CardContent>
         <div className={classes.controls}>
-          <a href={websiteUrl} className={classes.link}>
+          <a href={websiteUrl} className={classes.link} itemProp="url">
             {'Website'}
           </a>
           {phone ? (
             <Fragment>
               {'|'}
-              <a href={`tel:${phone}`} className={classes.link}>
+              <a
+                href={`tel:${phone}`}
+                className={classes.link}
+                itemProp={'telephone'}
+              >
                 {phone}
               </a>
             </Fragment>
@@ -79,7 +94,7 @@ export const RestaurantListItem = ({
           {menuUrl ? (
             <Fragment>
               {'|'}
-              <a href={menuUrl} className={classes.link}>
+              <a href={menuUrl} className={classes.link} itemProp={'menu'}>
                 {'Menu'}
               </a>
             </Fragment>
