@@ -51,10 +51,11 @@ export const RestaurantListItem = ({
   return (
     <Card
       className={classes.root}
-      itemscope
+      itemscope={true} // This gets removed if no value
       itemtype={'https://schema.org/Restaurant'}
     >
       <CardMedia
+        itemprop={'logo'}
         className={classes.cover}
         image={logoUrl}
         title={`${name} logo`}
