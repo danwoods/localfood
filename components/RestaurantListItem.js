@@ -19,8 +19,9 @@ const useListItemCardStyles = makeStyles((theme) => ({
   },
   cover: {
     backgroundSize: 'contain',
-    margin: '8px 0',
-    width: 151
+    margin: '8px 0 8px 8px',
+    width: theme.spacing(19),
+    height: theme.spacing(14)
   },
   controls: {
     display: 'flex',
@@ -50,7 +51,7 @@ export const RestaurantListItem = ({
 
   return (
     <Card
-      className={classes.root}
+      classes={{ root: classes.root }}
       itemScope
       itemType={'https://schema.org/Restaurant'}
     >
@@ -58,6 +59,7 @@ export const RestaurantListItem = ({
         itemProp={'image'}
         className={classes.cover}
         image={logoUrl}
+        component={'img'}
         title={`${name} logo`}
       />
       <div className={classes.details}>
@@ -92,7 +94,7 @@ export const RestaurantListItem = ({
           {menuUrl ? (
             <Fragment>
               {'|'}
-              <a href={menuUrl} className={classes.link}>
+              <a href={menuUrl} className={classes.link} itemProp={'menu'}>
                 {'Menu'}
               </a>
             </Fragment>
