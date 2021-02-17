@@ -51,5 +51,53 @@
     "menuUrl": null,
     "orderUrl": null,
     "offersDelivery": false
+  },
+  {
+    "id": "denver-community-fridge-south-broadway",
+    "name": "Denver Community Fridge (South Broadway)",
+    "cuisine": "Grocery",
+    "logoUrl": "https://denvercommunityfridge.square.site/uploads/b/3d8ddcc31185cd6e6d7c596c7cfd88ade65d3803d23ddeba46f23ee623e2a25e/2020-12-30_17-33-02_1609378402_1611115942.jpg",
+    "address": "2 South Broadway, Denver, CO, 80209",
+    "phone": null,
+    "websiteUrl": "https://denvercommunityfridge.square.site/",
+    "menuUrl": null,
+    "orderUrl": null,
+    "offersDelivery": false
+  },
+  {
+    "id": "denver-community-fridge-five-points",
+    "name": "Denver Community Fridge (Five Points)",
+    "cuisine": "Grocery",
+    "logoUrl": "https://denvercommunityfridge.square.site/uploads/b/3d8ddcc31185cd6e6d7c596c7cfd88ade65d3803d23ddeba46f23ee623e2a25e/IMG_3824_1609374851.jpeg",
+    "address": "2700 Walnut Street, Denver, CO, 80205",
+    "phone": null,
+    "websiteUrl": "https://denvercommunityfridge.square.site/",
+    "menuUrl": null,
+    "orderUrl": null,
+    "offersDelivery": false
+  },
+  {
+    "id": "denver-community-fridge-sunnyside",
+    "name": "Denver Community Fridge (Sunnyside)",
+    "cuisine": "Grocery",
+    "logoUrl": "https://denvercommunityfridge.square.site/uploads/b/3d8ddcc31185cd6e6d7c596c7cfd88ade65d3803d23ddeba46f23ee623e2a25e/2021-02-01_14-27-27_1612218481.jpg",
+    "address": "4301 North Pecos Street, Denver, CO, 80205",
+    "phone": null,
+    "websiteUrl": "https://denvercommunityfridge.square.site/",
+    "menuUrl": null,
+    "orderUrl": null,
+    "offersDelivery": false
+  },
+  {
+    "id": "denver-community-fridge-lakeside",
+    "name": "Denver Community Fridge (Lakeside)",
+    "cuisine": "Grocery",
+    "logoUrl": "https://denvercommunityfridge.square.site/uploads/b/3d8ddcc31185cd6e6d7c596c7cfd88ade65d3803d23ddeba46f23ee623e2a25e/2021-02-01_14-20-51_1612218149.jpg",
+    "address": "4999 West 44th Avenue, Denver, CO 80212",
+    "phone": null,
+    "websiteUrl": "https://denvercommunityfridge.square.site/",
+    "menuUrl": null,
+    "orderUrl": null,
+    "offersDelivery": false
   }
 ]

@@ -68,10 +68,14 @@ export const RestaurantListItem = ({
           <a href={websiteUrl} className={classes.link}>
             {'Website'}
           </a>
-          |
-          <a href={`tel:${phone}`} className={classes.link}>
-            {phone}
-          </a>
+          {phone ? (
+            <Fragment>
+              {'|'}
+              <a href={`tel:${phone}`} className={classes.link}>
+                {phone}
+              </a>
+            </Fragment>
+          ) : null}
           {menuUrl ? (
             <Fragment>
               {'|'}
