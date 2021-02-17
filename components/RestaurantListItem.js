@@ -49,7 +49,11 @@ export const RestaurantListItem = ({
   const classes = useListItemCardStyles()
 
   return (
-    <Card className={classes.root}>
+    <Card
+      className={classes.root}
+      itemscope
+      itemtype={'https://schema.org/Restaurant'}
+    >
       <CardMedia
         className={classes.cover}
         image={logoUrl}
@@ -57,21 +61,29 @@ export const RestaurantListItem = ({
       />
       <div className={classes.details}>
         <CardContent className={classes.content}>
-          <Typography component="h5" variant="h5">
+          <Typography component="h5" variant="h5" itemprop="name">
             {name}
           </Typography>
-          <Typography variant="subtitle1" color="textSecondary">
+          <Typography
+            variant="subtitle1"
+            color="textSecondary"
+            itemprop="servesCuisine"
+          >
             {`${cuisine}`}
           </Typography>
         </CardContent>
         <div className={classes.controls}>
-          <a href={websiteUrl} className={classes.link}>
+          <a href={websiteUrl} className={classes.link} itemprop="url">
             {'Website'}
           </a>
           {phone ? (
             <Fragment>
               {'|'}
-              <a href={`tel:${phone}`} className={classes.link}>
+              <a
+                href={`tel:${phone}`}
+                className={classes.link}
+                itemprop="telephone"
+              >
                 {phone}
               </a>
             </Fragment>
