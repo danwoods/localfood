@@ -25,10 +25,11 @@ const useStyles = makeStyles({
   root: {
     width: '100%',
     maxWidth: 960,
-    margin: '64px auto'
+    margin: '0px auto'
   },
   header: {
-    textAlign: 'center'
+    textAlign: 'center',
+    paddingBottom: 16
   },
   pickupOrDelievery: {
     display: 'flex',
@@ -60,8 +61,14 @@ function App() {
   return (
     <div className={classes.root}>
       <header className={classes.header}>
-        <Typography variant="h1" component="h2" gutterBottom>
-          {'YOUR Local Food Directory'}
+        <Typography variant="h1" gutterBottom>
+          {'Local Food'}
+        </Typography>
+        <Typography variant="h4">
+          {'Local delivery. Zero fees. Powered by community.'}
+        </Typography>
+        <Typography variant="h6" gutterBottom>
+          {'(Denver Only)'}
         </Typography>
       </header>
       {/*
