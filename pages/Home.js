@@ -56,8 +56,6 @@ function App() {
     debounce: 300
   })
 
-  console.log({ ready })
-
   return (
     <div className={classes.root}>
       <header className={classes.header}>
