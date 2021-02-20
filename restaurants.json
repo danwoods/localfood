@@ -99,5 +99,17 @@
     "menuUrl": null,
     "orderUrl": null,
     "offersDelivery": false
+  },
+  {
+    "id": "thai-basil",
+    "name": "Thai Basil",
+    "cuisine": "Thai",
+    "logoUrl": "https://thaibasil-denver.com/assets/logo.png",
+    "address": "1400 East 18th Avenue Denver, CO",
+    "phone": " 303-861-1226",
+    "websiteUrl": "https://thaibasil-denver.com/",
+    "menuUrl": "https://ordernow.thaibasil-denver.com/",
+    "orderUrl": "https://ordernow.thaibasil-denver.com/",
+    "offersDelivery": true
   }
 ]
