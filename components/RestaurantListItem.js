@@ -116,7 +116,6 @@ export const RestaurantListItem = ({
             <Fragment>
               {'|'}
               <a
-                target={'_blank'}
                 href={`tel:${phone}`}
                 className={classes.link}
                 itemProp={'telephone'}

@@ -4,14 +4,13 @@
 let genericTrack = () => {}
 
 try {
-  if (typeof window !== 'undefined') {
+  if (typeof window.pa !== 'undefined') {
     genericTrack = pa.track
   } else {
     throw 'TRACKING_SCRIPT_NOT_LOADED'
   }
 } catch (err) {
   console.error(err)
-  //throw 'EXTERNAL_TRACKING_ERROR'
 }
 
 /**
