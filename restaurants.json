@@ -1,7 +1,7 @@
 [
   {
-    "id": "mizumi",
-    "name": "Mizumi Ramen and Saki",
+    "id": "mizuumi",
+    "name": "Mizuumi Ramen and Saki",
     "cuisine": "Ramen",
     "logoUrl": "https://d2vwsr3mua7yp8.cloudfront.net/49b4ad28-ebe1-4ec2-92c5-722d151f2c96.jpg",
     "phone": "303-353-8158",
@@ -99,5 +99,17 @@
     "menuUrl": null,
     "orderUrl": null,
     "offersDelivery": false
+  },
+  {
+    "id": "thai-basil",
+    "name": "Thai Basil",
+    "cuisine": "Thai",
+    "logoUrl": "https://thaibasil-denver.com/assets/logo.png",
+    "address": "1400 East 18th Avenue Denver, CO",
+    "phone": " 303-861-1226",
+    "websiteUrl": "https://thaibasil-denver.com/",
+    "menuUrl": "https://ordernow.thaibasil-denver.com/",
+    "orderUrl": "https://ordernow.thaibasil-denver.com/",
+    "offersDelivery": true
   }
 ]
