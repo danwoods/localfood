@@ -119,7 +119,7 @@ function App() {
       <section>
         <List className={classes.list}>
           {restaurants.map((r) => (
-            <ListItem>
+            <ListItem key={r.id}>
               <RestaurantListItem {...r} />
             </ListItem>
           ))}
