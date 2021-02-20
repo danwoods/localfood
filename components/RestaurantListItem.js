@@ -5,6 +5,23 @@ import Typography from '@material-ui/core/Typography'
 import { Fragment } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 
+/** Tracking */
+let clientTrack = null
+
+/** Tracking function
+ * @param {object} trackData - Data to track
+ * @param {string} trackData.name - Name
+ * @param {string} trackData.unit - Unit
+ * @param {string} trackData.value - Value
+ */
+const track = async (trackData) => {
+  if (!clientTrack) {
+    clientTrack = await import('../util/tracking.js').then((mod) => mod.track)
+  }
+
+  clientTrack(trackData)
+}
+
 const useListItemCardStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
@@ -39,6 +56,7 @@ const useListItemCardStyles = makeStyles((theme) => ({
 }))
 
 export const RestaurantListItem = ({
+  id,
   name,
   cuisine,
   logoUrl,
@@ -54,6 +72,9 @@ export const RestaurantListItem = ({
       classes={{ root: classes.root }}
       itemScope
       itemType={'https://schema.org/Restaurant'}
+      onMouseEnter={() =>
+        track({ name: 'INTERACTION', value: id, unit: 'MOUSE_ENTER' })
+      }
     >
       <CardMedia
         itemProp={'image'}
@@ -76,16 +97,36 @@ export const RestaurantListItem = ({
           </Typography>
         </CardContent>
         <div className={classes.controls}>
-          <a href={websiteUrl} className={classes.link} itemProp="url">
+          <a
+            target={'_blank'}
+            href={websiteUrl}
+            className={classes.link}
+            itemProp="url"
+            onMouseDown={() =>
+              track({
+                name: 'INTERACTION',
+                value: id,
+                unit: 'MOUSEDOWN:WEBSITE'
+              })
+            }
+          >
             {'Website'}
           </a>
           {phone ? (
             <Fragment>
               {'|'}
               <a
+                target={'_blank'}
                 href={`tel:${phone}`}
                 className={classes.link}
                 itemProp={'telephone'}
+                onMouseDown={() =>
+                  track({
+                    name: 'INTERACTION',
+                    value: id,
+                    unit: 'MOUSEDOWN:PHONE'
+                  })
+                }
               >
                 {phone}
               </a>
@@ -94,7 +135,19 @@ export const RestaurantListItem = ({
           {menuUrl ? (
             <Fragment>
               {'|'}
-              <a href={menuUrl} className={classes.link} itemProp={'menu'}>
+              <a
+                target={'_blank'}
+                href={menuUrl}
+                className={classes.link}
+                itemProp={'menu'}
+                onMouseDown={() =>
+                  track({
+                    name: 'INTERACTION',
+                    value: id,
+                    unit: 'MOUSEDOWN:MENU'
+                  })
+                }
+              >
                 {'Menu'}
               </a>
             </Fragment>
@@ -102,7 +155,18 @@ export const RestaurantListItem = ({
           {orderUrl ? (
             <Fragment>
               {'|'}
-              <a href={orderUrl} className={classes.link}>
+              <a
+                target={'_blank'}
+                href={orderUrl}
+                className={classes.link}
+                onMouseDown={() =>
+                  track({
+                    name: 'INTERACTION',
+                    value: id,
+                    unit: 'MOUSEDOWN:ORDER'
+                  })
+                }
+              >
                 {'Order Now'}
               </a>
             </Fragment>
