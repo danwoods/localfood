@@ -1,3 +1,4 @@
+import Autocomplete from '@material-ui/lab/Autocomplete'
 import Button from '@material-ui/core/Button'
 import Checkbox from '@material-ui/core/Checkbox'
 import Dialog from '@material-ui/core/Dialog'
@@ -10,16 +11,16 @@ import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
 import TextField from '@material-ui/core/TextField'
 import Typography from '@material-ui/core/Typography'
-import { Create } from '../components/Create.js'
-import { RestaurantListItem } from '../components/RestaurantListItem.js'
-import { makeStyles } from '@material-ui/core/styles'
-import { useState } from 'react'
+import restaurants from '../restaurants.json'
 import usePlacesAutocomplete, {
   getGeocode,
   getLatLng
 } from 'use-places-autocomplete'
-import Autocomplete from '@material-ui/lab/Autocomplete'
-import restaurants from '../restaurants.json'
+import { Create } from '../components/Create.js'
+import { EmailLink } from '../components/EmailLink.js'
+import { RestaurantListItem } from '../components/RestaurantListItem.js'
+import { makeStyles } from '@material-ui/core/styles'
+import { useState } from 'react'
 
 const useStyles = makeStyles({
   root: {
@@ -36,6 +37,10 @@ const useStyles = makeStyles({
     justifyContent: 'space-around',
     margin: 'auto',
     width: '60%'
+  },
+  feedbackSection: {
+    display: 'flex',
+    justifyContent: 'center'
   }
 })
 
@@ -124,6 +129,13 @@ function App() {
             </ListItem>
           ))}
         </List>
+      </section>
+      <section className={classes.feedbackSection}>
+        <EmailLink emailAddress={'support@localfood.page'} title={'Mail'}>
+          <Button variant={'contained'} disableElevation>
+            {'Feedback / Suggest New Restaurant'}
+          </Button>
+        </EmailLink>
       </section>
       {/*
       <Button onClick={() => setCreateDialogOpen(true)}>
