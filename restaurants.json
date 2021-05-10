@@ -123,5 +123,16 @@
     "menuUrl": "https://www.sidewokcafe.com/menu",
     "orderUrl": "https://www.sidewokcafe.com/delivery",
     "offersDelivery": true
+  },
+  {
+    "id": "pho-2-love",
+    "name": "Pho 2 Love",
+    "cuisine": "Pho",
+    "logoUrl": "https://images.squarespace-cdn.com/content/5b021c98a9e0285e6e9a9f38/1526921670396-KQO2ZWRDBZBQIACO2KPM/sidewok-logo-white.png",
+    "address": "6593 W Colfax Avenue Lakewood, CO, CO 80214",
+    "phone": "303-233-1900",
+    "websiteUrl": "https://www.yelp.com/biz/pho-2-love-lakewood",
+    "menuUrl": "https://www.allmenus.com/co/denver/612392-pho-2-love/menu/",
+    "offersDelivery": false
   }
 ]
